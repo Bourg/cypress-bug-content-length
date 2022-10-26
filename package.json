@@ -2,10 +2,10 @@
   "name": "cypress-header-bug-minimal",
   "version": "1.0.0",
   "description": "Reproduction of a bug with cy.intercept and the Content-Length header",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier:fix": "prettier --write .",
     "cypress:open": "cypress open",

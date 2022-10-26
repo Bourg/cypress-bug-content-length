@@ -11,7 +11,7 @@
 This repo is a minimal example of a Cypress test that exhibits a bug in which a "Content-Length: 0" header is added when `cy.intercept` is used to spy.
 To demonstrate this behavior, this repo contains the simplest possible app and associated Cypress tests that exhibit the behavior.
 
-For the app, a [simple Express server](index.js) is used that only has two routes:
+For the app, a [simple Express server](app.js) is used that only has two routes:
 
 - `/` - A static HTML document for Cypress to load in the tests
 - `/api` - An API route that echoes back the headers in JSON (just `req.headers`)

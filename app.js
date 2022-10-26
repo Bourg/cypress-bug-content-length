@@ -5,7 +5,7 @@ const path = require("path");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "web", "index.html"));
+  res.sendFile(path.resolve(__dirname, "index.html"));
 });
 
 app.get("/api", (req, res) => {
