@@ -7,11 +7,15 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier:fix": "prettier --write ."
+    "prettier:fix": "prettier --write .",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "author": "Austin Bourgerie",
   "license": "MIT",
   "devDependencies": {
+    "cypress": "^10.11.0",
+    "nodemon": "^2.0.20",
     "prettier": "^2.7.1"
   },
   "dependencies": {
