@@ -10,10 +10,31 @@
     <title>Cypress Intercept Bug Demo</title>
   </head>
   <body>
-    <h1>API Received Request Headers</h1>
+    <h1>Cypress Intercept Bug Demo</h1>
+    <h2>Content-Length Header</h2>
+    <pre id="content-length-display"></pre>
+    <h2>All request headers as received by the server</h2>
     <pre id="headers-display"></pre>
     <script>
-      console.log("hello");
+      fetch("/api")
+        .then((res) => res.json())
+        .then((data) => {
+          const contentLengthHeader = "content-length";
+          const hasContentLengthHeader = Object.prototype.hasOwnProperty.call(
+            data,
+            contentLengthHeader
+          );
+          document.getElementById("content-length-display").innerText =
+            hasContentLengthHeader
+              ? JSON.stringify(data[contentLengthHeader])
+              : "No Content-Length header was received by the server";
+
+          document.getElementById("headers-display").innerText = JSON.stringify(
+            data,
+            null,
+            2
+          );
+        });
     </script>
   </body>
 </html>

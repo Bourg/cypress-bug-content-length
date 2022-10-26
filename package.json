@@ -4,6 +4,8 @@
   "description": "Reproduction of a bug with cy.intercept and the Content-Length header",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier:fix": "prettier --write ."
   },
